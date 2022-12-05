@@ -1,0 +1,159 @@
+.HeaderMobile {
+  display: none;
+  height: 100px;
+}
+
+@media screen and (max-width: 650px) {
+  .HeaderMobile {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .HeaderMobile > .nav {
+    margin: auto;
+    height: 80px;
+    --bs-nav-link-padding-x: 0rem;
+    --bs-nav-link-padding-y: 0rem;
+  }
+  .HeaderMobile > .nav > .nav-item {
+    margin: 10px 15px;
+    height: 75px;
+  }
+  .HeaderMobile > .nav > .nav-item > .nav-link {
+    display: inline;
+    font-size: 20px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book > svg {
+    margin-left: 15px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .read-book > svg {
+    margin-left: 15px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .finished-book > svg {
+    margin-left: 15px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book > .bi-plus-lg {
+    padding: 2px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 420px) {
+  .HeaderMobile > .nav {
+    margin: auto;
+    height: 80px;
+  }
+  .HeaderMobile > .nav > .nav-item {
+    margin: 10px 15px;
+    margin-bottom: 0;
+    height: 75px;
+  }
+  .HeaderMobile > .nav > .nav-item > .nav-link {
+    display: inline;
+    font-size: 20px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book {
+    margin-left: 15px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .read-book {
+    margin-left: 5px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .finished-book {
+    width: 16px;
+    height: 16px;
+    margin-left: 5px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book > .bi-plus-lg {
+    padding: 2px;
+    border: 1px solid white;
+    border-radius: 50%;
+  }
+}
+@media screen and (max-width: 395px) {
+  .HeaderMobile > .nav > .nav-item {
+    margin: 15px 15px;
+  }
+  .HeaderMobile > .nav > .nav-item > .nav-link {
+    font-size: 15px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book {
+    padding: 0;
+    margin: auto;
+    margin-left: 5px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book > p {
+    margin-left: 6px;
+  }
+  .HeaderMobile > .nav > .nav-item > .read-book {
+    margin-left: 0px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .read-book > p {
+    margin-left: 6px;
+  }
+  .HeaderMobile > .nav > .nav-item > .finished-book {
+    margin-left: 0px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .finished-book > p {
+    margin-left: 5px;
+  }
+}
+@media screen and (max-width: 300px) {
+  .HeaderMobile > .nav > .nav-item {
+    margin: 15px 13px;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book {
+    padding: 0;
+    margin: auto;
+    margin-left: 20px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .add-book > svg {
+    margin-left: 2px;
+  }
+  .HeaderMobile > .nav > .nav-item > .read-book {
+    padding: 0;
+    margin: auto;
+    margin-left: 12px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .read-book > p {
+    margin-left: 2px;
+  }
+  .HeaderMobile > .nav > .nav-item > .finished-book {
+    padding: 0;
+    margin: auto;
+    margin-left: 12px;
+    color: whitesmoke;
+    transition: 500ms;
+  }
+  .HeaderMobile > .nav > .nav-item > .finished-book > p {
+    margin-left: auto;
+  }
+}

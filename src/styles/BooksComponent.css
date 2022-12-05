@@ -1,0 +1,14 @@
+.Book-container {
+  width: auto;
+  height: 78vh;
+}
+.empty-booklist {
+  width: auto;
+  height: 79vh;
+}
+@media screen and (max-width: 420px) {
+  .empty-booklist {
+    width: auto;
+    height: 80vh;
+  }
+}

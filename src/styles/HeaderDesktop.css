@@ -1,0 +1,76 @@
+.HeaderDesktop {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  background-color: black;
+}
+.HeaderDesktop > h1 {
+  font-size: 25px;
+  color: whitesmoke;
+  margin: auto;
+  margin-left: 35px;
+}
+.HeaderDesktop > h1 > a {
+  font-size: 25px;
+  color: whitesmoke;
+  margin: auto;
+  text-decoration: none;
+}
+.HeaderDesktop > .nav {
+  margin: auto;
+  margin-right: 35px;
+}
+.HeaderDesktop > .nav > .nav-item {
+  margin: 15px 15px;
+}
+.HeaderDesktop > .nav > .nav-item > .nav-link {
+  font-size: 20px;
+  color: whitesmoke;
+  transition: 500ms;
+}
+.HeaderDesktop > .nav > .nav-item > .nav-link:hover {
+  margin: 0;
+  font-size: 25px;
+}
+.HeaderDesktop > .nav > .nav-item > .add-book {
+  margin-top: 5px;
+  padding: 2px;
+  border: 1px solid white;
+  border-radius: 50%;
+  color: whitesmoke;
+  transition: 500ms;
+}
+.HeaderDesktop > .nav > .nav-item > .add-book:hover {
+  margin: 0;
+}
+.HeaderDesktop > .nav > .nav-item > .add-book > .bi-plus-lg {
+  transition: 0.5s;
+}
+.HeaderDesktop > .nav > .nav-item > .add-book > .bi-plus-lg:hover {
+  width: 42px;
+  height: 42px;
+}
+@media screen and (max-width: 1300px) {
+  .HeaderDesktop > h1 {
+    margin: auto;
+    margin-left: 10px;
+  }
+  .HeaderDesktop > .nav {
+    margin: auto;
+    margin-right: 10px;
+  }
+  
+}
+
+@media screen and (max-width: 650px) {
+  .HeaderDesktop > .nav > .nav-item {
+    display: none;
+  }
+}
+@media screen and (max-width: 300px) {
+  .HeaderDesktop > h1 {
+    font-size: 25px;
+    color: whitesmoke;
+    margin: 22px;
+  }
+}

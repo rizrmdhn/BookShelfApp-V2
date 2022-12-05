@@ -1,0 +1,144 @@
+.book-item {
+  margin: 25px 15px;
+}
+.bookshelf-title {
+  position: relative;
+}
+.Booklist-card {
+  height: 750px;
+  overflow-y: scroll;
+}
+.books-item__card {
+  width: 300px;
+  height: 370px;
+}
+.booklists-title {
+  position: relative;
+  margin: auto;
+  margin-top: 25px;
+  margin-left: 50px;
+}
+.btn {
+  transition: 500ms;
+}
+.edit-icon {
+  position: absolute;
+  cursor: pointer;
+}
+.book-item__action {
+  margin: auto;
+}
+.book-item__action > .finished {
+  margin: auto;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.book-item__action > .read {
+  margin: auto;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.book-item__action > .delete {
+  margin: auto;
+  margin-left: 25px;
+  font-size: 20px;
+}
+.form-check-input {
+  cursor: pointer;
+}
+@media screen and (max-width: 1300px) {
+  .Bookshelf-card {
+    margin: auto !important;
+  }
+}
+@media screen and (max-width: 990px) {
+  .books-item__card {
+    margin: auto;
+    width: 250px;
+  }
+  .edit-icon {
+    width: 8px;
+    height: 8px;
+  }
+  .book-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .books-item__name {
+    font-size: 15px;
+  }
+  .books-item__publisher {
+    font-size: 15px;
+  }
+  .card-text {
+    font-size: 15px;
+  }
+  .book-item__action {
+    margin: auto;
+  }
+  .book-item__action > .finished {
+    margin: auto;
+    margin-left: 10px;
+    font-size: 15px;
+  }
+  .book-item__action > .read {
+    margin: auto;
+    margin-left: 15px;
+    font-size: 15px;
+  }
+  .book-item__action > .delete {
+    margin: auto;
+    margin-left: 15px;
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .booklist-container > .Booklist-card {
+    margin: auto;
+  }
+  .books-item__card {
+    width: 240px;
+  }
+  .edit-icon {
+    width: 8px;
+    height: 8px;
+  }
+  .book-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .books-item__name {
+    font-size: 15px;
+  }
+  .books-item__publisher {
+    font-size: 15px;
+  }
+  .card-text {
+    font-size: 15px;
+  }
+  .book-item__action {
+    margin: auto;
+  }
+  .book-item__action > .finished {
+    margin: auto;
+    margin-left: 5px;
+    font-size: 15px;
+  }
+  .book-item__action > .read {
+    margin: auto;
+    margin-left: 15px;
+    font-size: 15px;
+  }
+  .book-item__action > .delete {
+    margin: auto;
+    margin-left: 15px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .booklist-container > .Booklist-card {
+    margin: auto;
+    margin-left: 5px;
+  }
+}
