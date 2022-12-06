@@ -12,6 +12,7 @@ import { getDummyBooks } from "./utils";
 import BooksComponent from "./components/Books/BooksComponent";
 import FinishedBooks from "./components/Books/FinishedBooks";
 import BookEdit from "./components/Body/BookEdit";
+import ModalDesc from "./components/Modal/ModalDesc";
 
 const MySwal = withReactContent(Swal);
 
@@ -134,10 +135,7 @@ class App extends Component {
     });
   }
 
-  onEditHandler(id) {
-    // const editBooks = this.state.books.filter((book) => book.id === id);
-    // this.setState({ editBooks });
-  }
+  onEditHandler() {}
 
   render() {
     return (
@@ -186,6 +184,7 @@ class App extends Component {
                 }
               />
             </Routes>
+            <ModalDesc books={this.state.books} />
             <BookInput onAddBooks={this.onAddBooksHandler} />
             <BookEdit books={this.state.books} />
             <HeaderMobile />

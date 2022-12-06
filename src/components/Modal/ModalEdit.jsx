@@ -26,14 +26,14 @@ function ModalEdit({
       {/* <!-- Modal --> */}
       <div
         className="modal fade"
-        id={`details${books.id}`}
+        id={`edit${books.id}`}
         tabIndex="exampleModalLabel"
         aria-hidden="true"
       >
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
+              <h1 className="modal-title fs-5 ms-4" id="exampleModalLabel">
                 Edit Book
               </h1>
               <button
@@ -153,7 +153,7 @@ function ModalEdit({
                       onChange={setBookReading}
                       value={bookReading}
                     />
-                    <Label check>Checked switch checkbox input</Label>
+                    <Label check>Reading ?</Label>
                   </FormGroup>
                 </Row>
                 <div className="modal-footer mt-4">

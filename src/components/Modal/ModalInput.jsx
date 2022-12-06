@@ -3,19 +3,12 @@ import { Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
 
 function ModalInput({
   setBookTitle,
-  bookTitle,
   setBookYear,
-  bookYear,
   setBookAuthor,
-  bookAuthor,
   setBookSummary,
-  bookSummary,
   setBookPublisher,
-  bookPublisher,
   setBookPageCount,
-  bookPageCount,
   setBookReadPage,
-  bookReadPage,
   setBookReading,
   bookReading,
   onSubmit,
@@ -32,7 +25,7 @@ function ModalInput({
         <div className="modal-dialog">
           <div className="modal-content">
             <div className="modal-header">
-              <h1 className="modal-title fs-5" id="exampleModalLabel">
+              <h1 className="modal-title fs-5 ms-4" id="exampleModalLabel">
                 Add Book
               </h1>
               <button
@@ -55,7 +48,6 @@ function ModalInput({
                       placeholder="Enter book title"
                       type="text"
                       onChange={setBookTitle}
-                      // value={bookTitle}
                     />
                   </Col>
                 </Row>
@@ -70,7 +62,6 @@ function ModalInput({
                       placeholder="Year release"
                       type="number"
                       onChange={setBookYear}
-                      // value={bookYear}
                     />
                   </Col>
                   <Col className="col-lg">
@@ -83,7 +74,6 @@ function ModalInput({
                       placeholder="Enter the book author"
                       type="text"
                       onChange={setBookAuthor}
-                      // value={bookAuthor}
                     />
                   </Col>
                 </Row>
@@ -96,7 +86,6 @@ function ModalInput({
                       placeholder="Enter the book summary"
                       type="textarea"
                       onChange={setBookSummary}
-                      // value={bookSummary}
                     />
                   </Col>
                 </Row>
@@ -111,7 +100,6 @@ function ModalInput({
                       placeholder="Enter the book publisher"
                       type="text"
                       onChange={setBookPublisher}
-                      // value={bookPublisher}
                     />
                   </Col>
                 </Row>
@@ -126,7 +114,6 @@ function ModalInput({
                       placeholder="Total book page"
                       type="number"
                       onChange={setBookPageCount}
-                      // value={bookPageCount}
                     />
                   </Col>
                   <Col className="col-lg">
@@ -139,7 +126,6 @@ function ModalInput({
                       placeholder="Number readed page"
                       type="number"
                       onChange={setBookReadPage}
-                      // value={bookReadPage}
                     />
                   </Col>
                 </Row>
@@ -150,9 +136,8 @@ function ModalInput({
                       type="switch"
                       checked={bookReading}
                       onChange={setBookReading}
-                      // value={bookReading}
                     />
-                    <Label check>Checked switch checkbox input</Label>
+                    <Label check>Reading ?</Label>
                   </FormGroup>
                 </Row>
                 <div className="modal-footer mt-4">

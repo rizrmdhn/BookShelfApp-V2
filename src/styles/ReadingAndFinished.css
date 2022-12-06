@@ -25,6 +25,15 @@
   position: absolute;
   cursor: pointer;
 }
+.reading-icon {
+  cursor: pointer;
+}
+.finished-icon {
+  cursor: pointer;
+}
+.book-icon {
+  cursor: pointer;
+}
 .book-item__action {
   margin: auto;
 }
