@@ -104,6 +104,14 @@
     width: 8px;
     height: 8px;
   }
+  .reading-icon {
+    width: 64px;
+    height: 64px;
+  }
+  .finished-icon {
+    width: 64px;
+    height: 64px;
+  }
   .book-icon {
     width: 64px;
     height: 64px;

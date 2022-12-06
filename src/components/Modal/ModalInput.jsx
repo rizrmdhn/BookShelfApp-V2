@@ -55,7 +55,7 @@ function ModalInput({
                       placeholder="Enter book title"
                       type="text"
                       onChange={setBookTitle}
-                      value={bookTitle}
+                      // value={bookTitle}
                     />
                   </Col>
                 </Row>
@@ -70,7 +70,7 @@ function ModalInput({
                       placeholder="Year release"
                       type="number"
                       onChange={setBookYear}
-                      value={bookYear}
+                      // value={bookYear}
                     />
                   </Col>
                   <Col className="col-lg">
@@ -83,7 +83,7 @@ function ModalInput({
                       placeholder="Enter the book author"
                       type="text"
                       onChange={setBookAuthor}
-                      value={bookAuthor}
+                      // value={bookAuthor}
                     />
                   </Col>
                 </Row>
@@ -96,7 +96,7 @@ function ModalInput({
                       placeholder="Enter the book summary"
                       type="textarea"
                       onChange={setBookSummary}
-                      value={bookSummary}
+                      // value={bookSummary}
                     />
                   </Col>
                 </Row>
@@ -111,7 +111,7 @@ function ModalInput({
                       placeholder="Enter the book publisher"
                       type="text"
                       onChange={setBookPublisher}
-                      value={bookPublisher}
+                      // value={bookPublisher}
                     />
                   </Col>
                 </Row>
@@ -126,7 +126,7 @@ function ModalInput({
                       placeholder="Total book page"
                       type="number"
                       onChange={setBookPageCount}
-                      value={bookPageCount}
+                      // value={bookPageCount}
                     />
                   </Col>
                   <Col className="col-lg">
@@ -139,7 +139,7 @@ function ModalInput({
                       placeholder="Number readed page"
                       type="number"
                       onChange={setBookReadPage}
-                      value={bookReadPage}
+                      // value={bookReadPage}
                     />
                   </Col>
                 </Row>
@@ -150,7 +150,7 @@ function ModalInput({
                       type="switch"
                       checked={bookReading}
                       onChange={setBookReading}
-                      value={bookReading}
+                      // value={bookReading}
                     />
                     <Label check>Checked switch checkbox input</Label>
                   </FormGroup>

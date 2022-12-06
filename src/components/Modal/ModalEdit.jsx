@@ -2,6 +2,7 @@ import React from "react";
 import { Col, Form, FormGroup, Input, Label, Row } from "reactstrap";
 
 function ModalEdit({
+  books,
   setBookTitle,
   bookTitle,
   setBookYear,
@@ -25,7 +26,7 @@ function ModalEdit({
       {/* <!-- Modal --> */}
       <div
         className="modal fade"
-        id="ModalEdit"
+        id={`details${books.id}`}
         tabIndex="exampleModalLabel"
         aria-hidden="true"
       >

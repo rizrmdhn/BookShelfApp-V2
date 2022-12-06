@@ -96,7 +96,10 @@ class App extends Component {
     });
     const BookRead = this.state.books.filter((book) => book.id === id);
     const ReadBook =
-      (BookRead[0].reading = true) && (BookRead[0].finished = false);
+      (BookRead[0].reading = true) &&
+      (BookRead[0].readPage = 1) &&
+      (BookRead[0].finished = false);
+
     this.setState({ ReadBook });
   }
 
@@ -107,7 +110,9 @@ class App extends Component {
     });
     const BookFinished = this.state.books.filter((book) => book.id === id);
     const FinishedBook =
-      (BookFinished[0].finished = true) && (BookFinished[0].reading = false);
+      (BookFinished[0].finished = true) &&
+      (BookFinished[0].readPage = BookFinished[0].pageCount) &&
+      (BookFinished[0].reading = false);
     this.setState({ FinishedBook });
   }
 
@@ -122,36 +127,16 @@ class App extends Component {
       confirmButtonText: "Yes, delete it!",
     }).then((result) => {
       if (result.isConfirmed) {
-        MySwal.fire("Deleted!", id, "success");
+        MySwal.fire("Deleted!", `Books with id: ${id}`, "success");
         const books = this.state.books.filter((book) => book.id !== id);
         this.setState({ books });
       }
     });
   }
 
-  onEditHandler(books) {
-    let {
-      id,
-      name,
-      year,
-      author,
-      summary,
-      publisher,
-      pageCount,
-      readPage,
-      reading,
-      finished,
-    } = books;
-    localStorage.setItem("ID", id);
-    localStorage.setItem("Book-Title", name);
-    localStorage.setItem("Book-Year", year);
-    localStorage.setItem("Book-Author", author);
-    localStorage.setItem("Book-Summary", summary);
-    localStorage.setItem("Book-Publisher", publisher);
-    localStorage.setItem("Book-PageCount", pageCount);
-    localStorage.setItem("Book-ReadPage", readPage);
-    localStorage.setItem("Book-Reading", reading);
-    localStorage.setItem("Book-Finished", finished);
+  onEditHandler(id) {
+    // const editBooks = this.state.books.filter((book) => book.id === id);
+    // this.setState({ editBooks });
   }
 
   render() {
@@ -202,7 +187,7 @@ class App extends Component {
               />
             </Routes>
             <BookInput onAddBooks={this.onAddBooksHandler} />
-            <BookEdit onEditBook={this.onAddBooksHandler} />
+            <BookEdit books={this.state.books} />
             <HeaderMobile />
           </HashRouter>
 
