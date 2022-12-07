@@ -2,7 +2,7 @@ import React from "react";
 import "../../styles/ReadingAndFinished.css";
 import BooksComponent from "./BooksComponent";
 
-function FinishedBooks({ id, books, onRead, onFinished, onEdit, onDelete }) {
+function FinishedBooks({ id, books, onRead, onFinished, onDelete }) {
   const Finished = books.filter((books) => books.finished === true);
   return (
     <>
@@ -12,7 +12,6 @@ function FinishedBooks({ id, books, onRead, onFinished, onEdit, onDelete }) {
         onRead={onRead}
         onFinished={onFinished}
         onDelete={onDelete}
-        onEdit={onEdit}
       />
     </>
   );

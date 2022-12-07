@@ -6,12 +6,12 @@ class BookInput extends Component {
     super(props);
     this.state = {
       title: "",
-      year: "",
+      year: 0,
       author: "",
       summary: "",
       publisher: "",
-      pageCount: "",
-      readPage: "",
+      pageCount: 0,
+      readPage: 0,
       reading: false,
       finished: false,
     };
@@ -34,7 +34,6 @@ class BookInput extends Component {
   }
 
   onSubmitChangeEventHandler(event) {
-    // console.log('is this works?')
     event.preventDefault();
     this.props.onAddBooks(this.state);
     this.setState({
@@ -56,21 +55,13 @@ class BookInput extends Component {
         <ModalInput
           onSubmit={this.onSubmitChangeEventHandler}
           setBookTitle={this.onHandleChange}
-          // bookTitle={this.state.title}
           setBookYear={this.onHandleChange}
-          // bookYear={this.state.year}
           setBookAuthor={this.onHandleChange}
-          // bookAuthor={this.state.author}
           setBookSummary={this.onHandleChange}
-          // bookSummary={this.state.summary}
           setBookPublisher={this.onHandleChange}
-          // bookPublisher={this.state.publisher}
           setBookPageCount={this.onHandleChange}
-          // bookPageCount={this.state.bookPageCount}
           setBookReadPage={this.onHandleChange}
-          // bookReadPage={this.state.readPage}
           setBookReading={this.onSetBookReadStatusHandler}
-          // bookReading={this.state.reading}
         />
       </>
     );

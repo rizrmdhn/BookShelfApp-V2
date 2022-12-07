@@ -11,8 +11,7 @@ import ReadingBooks from "./components/Books/ReadingBooks";
 import { getDummyBooks } from "./utils";
 import BooksComponent from "./components/Books/BooksComponent";
 import FinishedBooks from "./components/Books/FinishedBooks";
-import BookEdit from "./components/Body/BookEdit";
-import ModalDesc from "./components/Modal/ModalDesc";
+import BookDesc from "./components/Body/BookDesc";
 
 const MySwal = withReactContent(Swal);
 
@@ -28,6 +27,7 @@ class App extends Component {
     this.onReadHandler = this.onReadHandler.bind(this);
     this.onFinishedHandler = this.onFinishedHandler.bind(this);
     this.onDeleteHandler = this.onDeleteHandler.bind(this);
+    this.onChangeHandler = this.onChangeHandler.bind(this);
     this.onEditHandler = this.onEditHandler.bind(this);
   }
 
@@ -105,16 +105,16 @@ class App extends Component {
   }
 
   onFinishedHandler(id) {
-    MySwal.fire({
-      html: <i>Berhasil ditambahkan ke daftar selesai dibaca</i>,
-      icon: "success",
-    });
     const BookFinished = this.state.books.filter((book) => book.id === id);
     const FinishedBook =
       (BookFinished[0].finished = true) &&
       (BookFinished[0].readPage = BookFinished[0].pageCount) &&
       (BookFinished[0].reading = false);
     this.setState({ FinishedBook });
+    MySwal.fire({
+      html: <i>Berhasil ditambahkan ke daftar selesai dibaca</i>,
+      icon: "success",
+    });
   }
 
   onDeleteHandler(id) {
@@ -135,7 +135,6 @@ class App extends Component {
     });
   }
 
-  onEditHandler() {}
 
   render() {
     return (
@@ -153,7 +152,6 @@ class App extends Component {
                     onRead={this.onReadHandler}
                     onFinished={this.onFinishedHandler}
                     onDelete={this.onDeleteHandler}
-                    onEdit={this.onEditHandler}
                   />
                 }
               />
@@ -166,7 +164,6 @@ class App extends Component {
                     onRead={this.onReadHandler}
                     onFinished={this.onFinishedHandler}
                     onDelete={this.onDeleteHandler}
-                    onEdit={this.onEditHandler}
                   />
                 }
               />
@@ -179,22 +176,18 @@ class App extends Component {
                     onRead={this.onReadHandler}
                     onFinished={this.onFinishedHandler}
                     onDelete={this.onDeleteHandler}
-                    onEdit={this.onEditHandler}
                   />
                 }
               />
             </Routes>
-            <ModalDesc books={this.state.books} />
             <BookInput onAddBooks={this.onAddBooksHandler} />
-            <BookEdit books={this.state.books} />
+            {/* <BookEdit
+              books={this.state.books}
+              onSubmit={this.onUpdateBooksHandler}
+            /> */}
+            <BookDesc books={this.state.books} />
             <HeaderMobile />
           </HashRouter>
-
-          {/* <Button
-            onClick={() => console.log(this.state.books, "<== bookstate")}
-          >
-            test
-          </Button> */}
         </div>
       </>
     );
